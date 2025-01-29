@@ -4,8 +4,11 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>how it  works - It is OTA On-The-Air</Text>
-      <Link href="/about">
+      <Link href="/about" asChild>
         <Text style={styles.link}>About me</Text>
+      </Link>
+      <Link href="/test" asChild>
+        <Text style={styles.link}>Test</Text>
       </Link>
     </View>
   );
@@ -28,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     textDecorationLine: "underline",
-    marginTop: 10,
+    marginTop: 20
   },
 });
 
