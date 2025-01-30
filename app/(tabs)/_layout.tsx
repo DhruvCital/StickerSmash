@@ -50,12 +50,12 @@ export default function TabsLayout() {
             }}
         />
         <Tabs.Screen
-            name="old index"
+            name="old_index"
             options={{
             headerTitle: "Old Index",
             tabBarIcon: ({ focused, color }) => (
                 <Ionicons
-                name={focused ? "information-circle-sharp" : "information-circle-outline"}
+                name={focused ? "information-sharp" : "information-circle-outline"}
                 color={color}
                 size={30}
                 />
