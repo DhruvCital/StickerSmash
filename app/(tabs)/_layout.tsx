@@ -49,6 +49,19 @@ export default function TabsLayout() {
             )
             }}
         />
+        <Tabs.Screen
+            name="old index"
+            options={{
+            headerTitle: "Old Index",
+            tabBarIcon: ({ focused, color }) => (
+                <Ionicons
+                name={focused ? "information-circle-sharp" : "information-circle-outline"}
+                color={color}
+                size={30}
+                />
+            )
+            }}
+        />
         </Tabs>
     </>
   );

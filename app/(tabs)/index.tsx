@@ -1,15 +1,19 @@
-import { Text, View, StyleSheet } from "react-native";
-import { Link } from "expo-router";
+import { View, StyleSheet } from "react-native";
+import ImageViewer from "@/components/ImageViewer";
+import Button from "@/components/Button";
+const placeholderImage = require("@/assets/images/background-image.png");
+
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>how it  works - It is OTA On-The-Air</Text>
-      <Link href="/about" asChild>
-        <Text style={styles.link}>About me</Text>
-      </Link>
-      <Link href="/test" asChild>
-        <Text style={styles.link}>Test</Text>
-      </Link>
+      <View style={styles.imageContainer}>
+        <ImageViewer imgSource={placeholderImage} />
+      </View>
+
+      <View style={styles.footerContainer}>
+        <Button theme="primary" label="Choose a photo" />
+        <Button label="Use this photo" />
+      </View>
     </View>
   );
 }
@@ -17,21 +21,17 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#323232"
   },
-  text: {
-    color: "#fff",
-    fontSize: 20,
-    fontWeight: "bold",
+  imageContainer: {
+    flex: 1,
+    paddingTop: 20,
+    alignItems: "center",
   },
-  link: {
-    color: "#5588ff",
-    fontSize: 20,
-    fontWeight: "bold",
-    textDecorationLine: "underline",
-    marginTop: 20
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: "center",
   },
 });
 
